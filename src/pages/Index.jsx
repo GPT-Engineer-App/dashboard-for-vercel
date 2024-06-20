@@ -1,4 +1,4 @@
-import { Container, SimpleGrid, Box, Heading } from "@chakra-ui/react";
+import { Container, SimpleGrid, Box, Heading, Progress } from "@chakra-ui/react";
 import SummaryCard from "../components/SummaryCard";
 import LineChart from "../components/LineChart";
 import DataTable from "../components/DataTable";
@@ -55,6 +55,12 @@ const Index = () => {
       </SimpleGrid>
       <Box mb={6}>
         <LineChart data={lineChartData} options={lineChartOptions} />
+      </Box>
+      <Box mb={6}>
+        <Heading as="h2" size="md" mb={4}>
+          Progress Example
+        </Heading>
+        <Progress value={70} size="lg" colorScheme="green" />
       </Box>
       <Box>
         <DataTable columns={tableColumns} data={tableData} />
